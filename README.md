@@ -1,2 +1,2 @@
-# landingpage
-My first landing page coding
+# Landing Page
+My first landing page coding for my own business

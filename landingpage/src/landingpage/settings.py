@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'contact',
+    'phonenumber_field'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'landingpage.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Saigon'
 
 USE_I18N = True
 
@@ -114,6 +116,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+PHONENUMBER_DB_FORMAT = 'EB164'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/

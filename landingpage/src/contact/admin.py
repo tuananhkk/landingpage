@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import Contact
 
 class ContactModelAdmin(admin.ModelAdmin):
-	list_display = ["name", "email", "phone", "timestamp"]
+	list_display = [Contact, "email", "phone", "timestamp"]
 	list_filter = ["timestamp"]
 	search_fields = ["name", "email", "phone","content"]
 

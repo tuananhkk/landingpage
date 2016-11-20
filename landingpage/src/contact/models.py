@@ -9,12 +9,12 @@ from django.core.urlresolvers import reverse
 class Contact(models.Model):
     name = models.CharField(max_length = 255, blank=False, verbose_name = "Full Name")
     email = models.EmailField(blank=False, verbose_name = "Email")
-    phone = PhoneNumberField(blank=False, verbose_name = "Phone Number")
+    phone = PhoneNumberField(blank=True, verbose_name = "Phone Number")
     content = models.TextField(max_length = 150, verbose_name = "Request Details")
     timestamp = models.DateTimeField(auto_now_add = True, verbose_name = "Request Time")
     
     def __str__(self):
-        return self.name + " - " + self.id
+        return self.name + " - " + str(self.id)
     
     # def get_absolute_url(self):
         # return reverse()
